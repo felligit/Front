@@ -8,17 +8,21 @@
   button {
     background-color: transparent;
     border-color: transparent;
-
     color: $font-light;
     font-size: 18px;
 
     &:hover {
       color: $primary-color-hover;
+      background-color: transparent;
+      border-color: transparent;
+      font-size: 20px;
     }
-    &:focus,
+    /*     &:focus,
     &:active {
       color: $font-light;
-    }
+      background-color: transparent;
+      border-color: transparent;
+    } */
   }
 
   &__left {

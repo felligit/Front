@@ -3,6 +3,7 @@ import { Form, Input, Button, notification } from "antd";
 import { Icon } from "antd-v3";
 import "./LoginForm.scss";
 import { signInApi } from "../../../api/user";
+import { ACCESS_TOKEN, REFRESH_TOKEN } from "../../../utils/constants";
 
 export default function LoginForm() {
   const [input, setInput] = useState({
@@ -15,13 +16,44 @@ export default function LoginForm() {
   };
 
   const login = async (e) => {
-    console.log(input);
+    //e.preventDefault();
+
+    const emailVal = input.email;
+    const passwordVal = input.password;
 
     const result = await signInApi(input);
+    console.log(result);
+
+    if (result.message) {
+      notification["error"]({
+        message: result.message,
+      });
+    } else {
+      const { accessToken, refreshToken } = result;
+      localStorage.setItem(ACCESS_TOKEN, accessToken);
+      localStorage.setItem(REFRESH_TOKEN, refreshToken);
+
+      notification["success"]({
+        message: "Login Correcto.",
+      });
+      window.location.href = "/admin";
+    }
+
+    /*     if (!emailVal || !passwordVal) {
+      notification["error"]({ message: "todos los campos son obligatorios" });
+    } else {
+      const result = await signInApi(input);
+      if (!result.ok) {
+        notification["error"]({ message: result.message });
+      } else {
+        notification["success"]({ message: result.message });
+      } */
+    //resetForm();
+    //}
   };
 
   return (
-    <Form className="login-form" onChange={changeForm} onSubmitCapture={login}>
+    <Form className="login-form" onChange={changeForm} onFinish={login}>
       <Form.Item>
         <Input
           prefix={<Icon type="user" style={{ color: "rgba(0, 0, 0, 0.25)" }} />}

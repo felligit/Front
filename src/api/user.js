@@ -45,16 +45,18 @@ export function signInApi(data) {
     fetch(url, params)
       .then((response) => {
         console.log(response);
-        //return response.json();
+        return response.json();
       })
+
       // .then((result) => {
       //   if (result.user) {
       //     return { ok: true, message: "Usuario logeado Correctamente" };
       //   }
       //   return { ok: false, message: result.message };
       // })
+
       .catch((err) => {
-        console.log(err);
+        return { ok: false, message: err.message };
       })
   );
 }
