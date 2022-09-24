@@ -1,0 +1,9 @@
+@import "../../../scss/index.scss";
+
+.config {
+  & .ant-modal-close-x {
+    i {
+      color: $font-grey;
+    }
+  }
+}

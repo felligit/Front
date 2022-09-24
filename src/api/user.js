@@ -60,3 +60,57 @@ export function signInApi(data) {
       })
   );
 }
+
+export function getUsersApi(token) {
+  const url = `${basePath}/${apiVersion}/users`;
+
+  const params = {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      authorization: token,
+    },
+  };
+  return fetch(url, params)
+    .then((response) => {
+      console.log(response);
+      return response.json();
+    })
+    .then((result) => {
+      // if (result.user) {
+      return result;
+      // return { ok: true, message: "Usuario logeado Correctamente" };
+      // }
+      //return { ok: false, message: result.message };
+    })
+    .catch((err) => {
+      return err.message;
+    });
+}
+
+export function getUsersActiveApi(token, status) {
+  const url = `${basePath}/${apiVersion}/users-active?active=${status}`;
+
+  const params = {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      authorization: token,
+    },
+  };
+  return fetch(url, params)
+    .then((response) => {
+      console.log(response);
+      return response.json();
+    })
+    .then((result) => {
+      // if (result.user) {
+      return result;
+      // return { ok: true, message: "Usuario logeado Correctamente" };
+      // }
+      //return { ok: false, message: result.message };
+    })
+    .catch((err) => {
+      return err.message;
+    });
+}

@@ -1,7 +1,8 @@
 import React from "react";
 import logo from "../../../assets/img/png/logo.png";
 import "./MenuTop.scss";
-import { Button, Icon } from "antd-v3";
+import { Button, Icon } from "antd";
+//import { Button, Icon } from "antd-v3";
 import { logout } from "../../../api/auth";
 import { Redirect } from "react-router-dom";
 

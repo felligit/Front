@@ -1,5 +1,6 @@
 import React from "react";
-import { Layout } from "antd-v3";
+import { Layout } from "antd";
+//import { Layout } from "antd-v3";
 import { Route, Switch } from "react-router-dom";
 
 import "./LayoutBasic.scss";

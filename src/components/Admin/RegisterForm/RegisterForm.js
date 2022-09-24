@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./RegisterForm.scss";
-import { Icon } from "antd-v3";
-import { Form, Input, Button, Checkbox, notification } from "antd";
+import { Form, Input, Button, Icon, Checkbox, notification } from "antd";
+//import { Icon } from "antd-v3";
 import {
   emailValidation,
   minLengthValidation,
@@ -140,11 +140,12 @@ export default function RegisterForm() {
       </Form.Item>
       <Form.Item>
         <Checkbox
+          className="register-form__check"
           name="privacyPolicy"
           checked={input.privacyPolicy}
           onChange={inputValidation}
         >
-          He leido y acepto las politicas de privacidad
+          He leido y acepto politicas de privacidad
         </Checkbox>
       </Form.Item>
       <Form.Item>

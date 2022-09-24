@@ -4,6 +4,8 @@
   display: flex;
   width: 100%;
   align-items: center;
+  position: relative;
+  z-index: 9000;
 
   button {
     background-color: transparent;

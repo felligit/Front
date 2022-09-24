@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Form, Input, Button, notification } from "antd";
-import { Icon } from "antd-v3";
+import { Form, Input, Button, notification, Icon } from "antd";
+//import { Icon } from "antd-v3";
 import "./LoginForm.scss";
 import { signInApi } from "../../../api/user";
 import { ACCESS_TOKEN, REFRESH_TOKEN } from "../../../utils/constants";
@@ -53,7 +53,7 @@ export default function LoginForm() {
   };
 
   return (
-    <Form className="login-form" onChange={changeForm} onFinish={login}>
+    <Form className="login-form" onChange={changeForm} onSubmitCapture={login}>
       <Form.Item>
         <Input
           prefix={<Icon type="user" style={{ color: "rgba(0, 0, 0, 0.25)" }} />}

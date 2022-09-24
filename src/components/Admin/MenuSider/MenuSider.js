@@ -1,43 +1,56 @@
 import React from "react";
-import { Layout, Icon } from "antd-v3";
+import { Layout, Menu, Icon } from "antd";
+//import { Icon } from "antd-v3";
 
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import "./MenuSider.scss";
 
-export default function MenuSider(props) {
-  //console.log(props);
-  const { menuCollapsed } = props;
+function MenuSider(props) {
+  const { menuCollapsed, location } = props;
   const { Sider } = Layout;
+  console.log(location.pathname);
 
   return (
     <Sider className="menu-sider" collapsed={menuCollapsed}>
-      <div className="menu-sider__control">
-        <div className="menu-sider__config">
-          <div className="menu-sider__config-space">
-            <Link to={"/admin"}>
-              <Icon type="home" />
-              <span
-                style={{ visibility: menuCollapsed ? "collapse" : "visible" }}
-                className="nav-text"
-              >
-                Home
-              </span>
-            </Link>
-          </div>
+      <Menu
+        theme="dark"
+        mode="vertical"
+        defaultSelectedKeys={[location.pathname]}
+        style={{
+          backgroundColor: "#050a30", //not working
+        }}
+      >
+        {/*         <div className="menu-sider__control">
+          <div className="menu-sider__config"> */}
+        <Menu.Item key="/admin">
+          {/* <div className="menu-sider__config-space"> */}
+          <Link to={"/admin"}>
+            <Icon type="home" />
+            <span className="nav-text">Home</span>
+          </Link>
+          {/* </div> */}
+        </Menu.Item>
 
+        <Menu.Item key="/admin/users">
           <div className="menu-sider__config-space">
-            <Link to={"/admin/menuWeb"}>
-              <Icon type="menu" />
+            <Link to={"/admin/users"}>
+              <Icon type="user" />
               <span
-                style={{ visibility: menuCollapsed ? "collapse" : "visible" }}
+                style={{
+                  visibility: menuCollapsed ? "collapse" : "visible",
+                }}
                 className="nav-text"
               >
-                Menu Web
+                Usuarios
               </span>
             </Link>
           </div>
-        </div>
-      </div>
+        </Menu.Item>
+        {/*           </div>
+        </div> */}
+      </Menu>
     </Sider>
   );
 }
+
+export default withRouter(MenuSider);

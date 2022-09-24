@@ -12,12 +12,14 @@
   &__input {
     .ant-input-prefix {
       i {
+        display: absolute;
+        padding: 3px 30px;
         font-size: 0em +22px / $defaultFontSize;
       }
     }
     input {
       font-size: 0em +20px / $defaultFontSize;
-      padding: 3px 9px !important;
+      padding: 3px 33px !important;
 
       &:focus {
         box-shadow: none;
@@ -25,7 +27,8 @@
     }
   }
   &__button {
-    width: 100%;
+    width: 80%;
+    margin-left: 33px;
     font-size: 0em +20px / $defaultFontSize;
     background-color: $primary-color;
     color: $font-light;
@@ -41,5 +44,8 @@
       color: $font-light;
       border: 0;
     }
+  }
+  &__check {
+    margin-left: 33px;
   }
 }

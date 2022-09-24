@@ -16,8 +16,10 @@
         width: 100%;
       }
     }
+
     &-tabs {
       background-color: $background-light;
+
       &__flex {
         display: flex;
         flex-direction: column;
@@ -25,19 +27,29 @@
         align-items: center;
         justify-content: center;
       }
+
+      input {
+        width: 80%;
+        margin-left: 33px;
+        align-items: center;
+        justify-content: center;
+      }
       .ant-tabs {
         width: 80vw;
+
         @media (min-width: $media-breakpoint-up-xs) {
           width: auto;
         }
       }
 
       .ant-tabs-nav-container {
-        height: 60px !important;
+        height: 54px !important;
+        justify-content: center !important;
+        align-items: center !important;
       }
 
       .ant-tabs-tab {
-        width: 39vw;
+        width: 45vw;
         height: 60px !important;
         justify-content: center !important;
         align-items: center !important;

@@ -5,6 +5,7 @@ import LayoutBasic from "../layouts/LayoutBasic";
 // Admin pages
 import AdminHome from "../pages/Admin";
 import AdminSignIn from "../pages/Admin/SignIn";
+import AdminUsers from "../pages/Admin/Users";
 
 // Clients pages
 import Home from "../pages/Home";
@@ -24,6 +25,7 @@ const routes = [
     routes: [
       { path: "/admin", component: AdminHome, exact: true },
       { path: "/admin/login", component: AdminSignIn, exact: true },
+      { path: "/admin/users", component: AdminUsers, exact: true },
       { component: Error404 },
     ],
   },
