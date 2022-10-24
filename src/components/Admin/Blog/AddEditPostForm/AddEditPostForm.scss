@@ -1,0 +1,35 @@
+@import "../../../../scss/index.scss";
+
+.add-edit-post-form {
+  text-align: center;
+  display: grid;
+
+  input {
+    font-size: 0em +18px / $defaultFontSize;
+    padding: 3px 33px !important;
+  }
+  .ant-form-item,
+  .ant-input-prefix {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    svg {
+      position: absolute;
+      margin-top: -10px;
+      color: $font-grey;
+    }
+  }
+
+  .anticon-calendar,
+  .ant-calendar-picker-icon {
+    position: absolute;
+    margin-top: -5px;
+    color: $font-grey;
+  }
+  .tox-tinymce {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .btn-submit {
+    width: 100%;
+  }
+}

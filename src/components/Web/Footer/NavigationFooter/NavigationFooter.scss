@@ -1,0 +1,36 @@
+@import "../../../../scss/index.scss";
+
+.navigation-footer {
+  h3 {
+    color: $fifth-color;
+    font-weight: bold;
+    padding: 0px 6px;
+  }
+
+  ul {
+    padding: 0px 6px;
+
+    li {
+      list-style: none;
+      padding: 5px 0px;
+
+      svg {
+        color: $fifth-color-dark;
+      }
+
+      span {
+        color: $fifth-color-dark;
+      }
+
+      a {
+        color: $fifth-color-dark;
+        &:hover {
+          color: $fifth-color;
+        }
+        i {
+          padding-right: 3px;
+        }
+      }
+    }
+  }
+}

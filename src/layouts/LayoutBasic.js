@@ -1,26 +1,27 @@
 import React from "react";
-import { Layout } from "antd";
+import { Row, Col } from "antd";
 //import { Layout } from "antd-v3";
 import { Route, Switch } from "react-router-dom";
+import MenuTop from "../components/Web/MenuTop";
+import Footer from "../components/Web/Footer";
 
 import "./LayoutBasic.scss";
 
 export default function LayoutBasic({ routes }) {
   //console.log(props);
 
-  const { Content, Footer } = Layout;
   return (
-    <Layout>
-      <h2>Menu Basic</h2>
-      <Layout>
-        <Content>
-          <LoadRoutes routes={routes} />
-        </Content>
-        <Footer>
-          <h5>Daniel Lanzziano | Diseñador & desarrollador Web</h5>
-        </Footer>
-      </Layout>
-    </Layout>
+    <>
+      <Row>
+        <Col sm={4} />
+        <Col sm={16}>
+          <MenuTop />
+        </Col>
+        <Col sm={4} />
+      </Row>
+      <LoadRoutes routes={routes} />
+      <Footer />
+    </>
   );
 }
 

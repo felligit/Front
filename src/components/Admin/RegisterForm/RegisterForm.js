@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./RegisterForm.scss";
 import { Form, Input, Button, Icon, Checkbox, notification } from "antd";
-//import { Icon } from "antd-v3";
+
 import {
   emailValidation,
   minLengthValidation,

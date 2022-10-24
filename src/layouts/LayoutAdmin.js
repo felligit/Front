@@ -46,7 +46,7 @@ export default function LayoutAdmin(props) {
             <LoadRoutes routes={routes} />
           </Content>
           <Footer className="layout-admin__footer">
-            <h5>Daniel Lanzziano | Diseñador & desarrollador Web</h5>
+            <h5>Daniel Lanzziano | Diseñador & desarrollador Web jajajaa</h5>
           </Footer>
         </Layout>
       </Layout>

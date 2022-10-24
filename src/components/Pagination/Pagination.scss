@@ -1,0 +1,17 @@
+@import "../../scss/index.scss";
+
+.pagination {
+  text-align: center;
+
+  .ant-pagination-disabled:hover .ant-pagination-item-link {
+    color: rgba(0, 0, 0, 0.25);
+    border-color: #c9c9c9;
+    cursor: pointer;
+  }
+
+  .ant-pagination-disabled,
+  .ant-pagination-item-5,
+  .ant-pagination-item-NaN {
+    visibility: hidden;
+  }
+}

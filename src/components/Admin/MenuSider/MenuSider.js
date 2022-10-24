@@ -46,6 +46,36 @@ function MenuSider(props) {
             </Link>
           </div>
         </Menu.Item>
+        <Menu.Item key="/admin/menu">
+          <div className="menu-sider__config-space">
+            <Link to={"/admin/menu"}>
+              <Icon type="menu" />
+              <span
+                style={{
+                  visibility: menuCollapsed ? "collapse" : "visible",
+                }}
+                className="nav-text"
+              >
+                Menú
+              </span>
+            </Link>
+          </div>
+        </Menu.Item>
+        <Menu.Item key="/admin/blog">
+          <div className="menu-sider__config-space">
+            <Link to={"/admin/blog"}>
+              <Icon type="message" />
+              <span
+                style={{
+                  visibility: menuCollapsed ? "collapse" : "visible",
+                }}
+                className="nav-text"
+              >
+                Blog
+              </span>
+            </Link>
+          </div>
+        </Menu.Item>
         {/*           </div>
         </div> */}
       </Menu>

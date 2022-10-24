@@ -1,0 +1,21 @@
+@import "../../../../scss/index.scss";
+
+.add-menu-web-form {
+  text-align: center;
+  .ant-form-item {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    .ant-input-prefix {
+      margin-top: 5px;
+      margin-bottom: 5px;
+      svg {
+        position: absolute;
+        margin-top: -10px;
+        color: $font-grey;
+      }
+    }
+    .btn-submit {
+      width: 100%;
+    }
+  }
+}
