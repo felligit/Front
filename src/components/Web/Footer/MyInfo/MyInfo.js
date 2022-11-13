@@ -8,8 +8,8 @@ export default function MyInfo() {
     <div className="my-info">
       <img src={logo} alt="Logo-Código-Web" />
       <h4>
-        Escríbenos para consultas o llámanos para un pedido, con gusto
-        atenderemos tus solicitudes.
+        Para consultas o pedidos Escríbenos Y/o llámanos, con gusto atenderemos
+        tus solicitudes.
       </h4>
       <SocialLinks />
     </div>

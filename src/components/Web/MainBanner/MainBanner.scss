@@ -4,10 +4,7 @@
   position: relative;
   height: 480px;
 
-  background-image: linear-gradient(
-      rgba(18, 18, 18, 0.5),
-      rgba(18, 18, 18, 0.6)
-    ),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),
     url("../../../assets/img/jpg/bg.jpg");
   background-repeat: no-repeat;
   background-size: 270%;
@@ -40,8 +37,8 @@
     height: 100%;
 
     h2 {
-      margin-top: 33px;
-      color: $secondary-color;
+      margin-top: 39px;
+      color: $fourth-color-hover;
       text-align: center;
       font-size: 3rem;
       font-weight: bold;
@@ -61,6 +58,33 @@
         text-align: center;
         padding: 1rem;
         color: #fff;
+      }
+    }
+
+    @media screen and (max-width: 576px) {
+      h2 {
+        margin-top: 33px;
+        color: $secondary-color;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
+        line-height: 1;
+      }
+
+      .font {
+        padding: 1rem;
+
+        h3 {
+          margin: 1 rem;
+          text-align: center;
+          color: #fff;
+        }
+        h4 {
+          margin: 0.8 rem;
+          text-align: center;
+          padding: 1rem;
+          color: #fff;
+        }
       }
     }
   }

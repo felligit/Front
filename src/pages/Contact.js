@@ -7,10 +7,10 @@ export default function Contact() {
   return (
     <>
       <Helmet>
-        <title>Contacto - Código-Web</title>
+        <title>Contacto - Codesa</title>
         <meta
           name="description"
-          content="Contacto | Código-Web"
+          content="Contacto | Llámenos - con gusto atenderemos su solicitud | Codesa"
           data-react-helmet="true"
         />
       </Helmet>

@@ -35,10 +35,10 @@ export default function PostInfo(props) {
   return (
     <>
       <Helmet>
-        <title>{postInfo.title} | Código-Web</title>
+        <title>{postInfo.title} | Codesa</title>
         <meta
           name="description"
-          content="Información detallada del producto | Código-Web"
+          content="Información detallada de los productos | Codesa"
           data-react-helmet="true"
         />
       </Helmet>

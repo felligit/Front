@@ -1,21 +1,60 @@
 import React from "react";
-import { Layout, Menu, Icon } from "antd";
+import { Layout, Menu, Icon, Button } from "antd";
+import logo_ver from "../../../assets/img/png/logo-ver.png";
+import { logout } from "../../../api/auth";
+import { Redirect } from "react-router-dom";
 //import { Icon } from "antd-v3";
 
 import { Link, withRouter } from "react-router-dom";
 import "./MenuSider.scss";
 
 function MenuSider(props) {
-  const { menuCollapsed, location } = props;
+  // const { menuCollapsed, location } = props;
+  // console.log(location.pathname);
+  const { menuCollapsed, setMenuCollapsed } = props;
   const { Sider } = Layout;
-  console.log(location.pathname);
+
+  const logoutUserjf = () => {
+    logout();
+    window.location.reload();
+    <Redirect to="/admin/login" />;
+    //console.log("Desconectado.");
+  };
 
   return (
     <Sider className="menu-sider" collapsed={menuCollapsed}>
       <Menu
         theme="dark"
         mode="vertical"
-        defaultSelectedKeys={[location.pathname]}
+        //  defaultSelectedKeys={[location.pathname]}
+        style={{
+          backgroundColor: "#050a30", //not working
+        }}
+      >
+        <div className="logo">
+          <Link to={"/"}>
+            <img src={logo_ver} className="logo__img-ver" alt="Logo-Codesa" />
+          </Link>
+        </div>
+        <div className="buttons">
+          <div className="buttons__left">
+            <Button onClick={() => setMenuCollapsed(!menuCollapsed)}>
+              <Icon type={menuCollapsed ? "menu-unfold" : "menu-fold"} />
+            </Button>
+          </div>
+
+          <div className="buttons__right">
+            <Button onClick={logoutUserjf}>
+              <Icon type="poweroff" />
+            </Button>
+          </div>
+        </div>
+      </Menu>
+
+      <Menu
+        theme="dark"
+        mode="vertical"
+        //        defaultSelectedKeys={[location.pathname]}
         style={{
           backgroundColor: "#050a30", //not working
         }}

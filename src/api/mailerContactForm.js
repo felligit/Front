@@ -1,7 +1,7 @@
 import { basePath, apiVersion } from "./config";
 
 export function contactFormApi(data) {
-  const url = `${basePath}/${apiVersion}/send-email`;
+  const url = `${basePath}/${apiVersion}/contac/send-email`;
   const params = {
     method: "POST",
     body: JSON.stringify(data),

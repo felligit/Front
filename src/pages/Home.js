@@ -8,10 +8,10 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>Inicio - Código-Web</title>
+        <title>Inicio | Codesa</title>
         <meta
           name="description"
-          content="Web Comercial para desarrollo del software y aplicaciones Web"
+          content="Home | Equipo multidisciplinar que desarrolla software y aplicaciones Web"
           data-react-helmet="true"
         />
       </Helmet>

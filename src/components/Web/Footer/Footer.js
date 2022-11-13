@@ -10,21 +10,21 @@ export default function Footer() {
   return (
     <Footer className="footer">
       <Row>
-        <Col md={4} />
-        <Col md={16}>
+        <Col md={2} />
+        <Col md={20}>
           <Row>
-            <Col md={6}>
+            <Col md={8}>
               <MyInfo />
             </Col>
-            <Col md={12}>{<NavigationFooter />}</Col>
-            <Col md={6}>{<Newsletter />}</Col>
+            <Col md={8}>{<NavigationFooter />}</Col>
+            <Col md={8}>{<Newsletter />}</Col>
           </Row>
           <Row className="footer__copyright">
-            <Col md={12}>Código-Web | Diseño y Desarrollo Web.</Col>
+            <Col md={12}>Codesa | Diseño y Desarrollo Web.</Col>
             <Col md={12}>© 2023 Todos Los Derechos Reservados</Col>
           </Row>
         </Col>
-        <Col md={4} />
+        <Col md={2} />
       </Row>
     </Footer>
   );

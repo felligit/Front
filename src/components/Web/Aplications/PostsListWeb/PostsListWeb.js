@@ -36,15 +36,20 @@ export default function PostsListWeb(props) {
   return (
     <>
       <Helmet>
-        <title>Productos | Código-Web</title>
+        <title>Productos | Codesa</title>
         <meta
           name="description"
-          content="Productos >>> Lista de productos que ofrecemos | Código-Web"
+          content="Productos | Lista de productos que ofrecemos | Codesa"
           data-react-helmet="true"
         />
       </Helmet>
       <div className="post-list-web">
         <h1>Productos</h1>
+        <p>
+          Estos son algunos de los productos entregados a personas
+          independientes y establecimientos comerciales{" "}
+        </p>
+
         <List
           dataSource={posts.docs}
           renderItem={(post) => <Post post={post}></Post>}

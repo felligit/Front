@@ -7,7 +7,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: $background-dark !important;
+  background-color: $background-grey-dark !important;
+}
+
+html {
+  //  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 code {

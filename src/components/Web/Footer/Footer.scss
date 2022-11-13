@@ -1,8 +1,8 @@
 @import "../../../scss/index.scss";
 
 .footer {
-  background-color: $background-dark;
-  border-top: 3px solid $fifth-color-dark;
+  background-color: $background-grey-dark;
+  border-top: 3px solid $background-grey-hover;
   color: $fifth-color-light;
 
   &__box {

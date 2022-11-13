@@ -15,4 +15,13 @@
     height: 36px;
     font-size: 20px;
   }
+
+  .login-form-button {
+    background-color: $background-grey-hover;
+    border: 1px solid $border-dark;
+    &:hover {
+      background-color: $background-grey-dark;
+      border: 1px solid $border-light;
+    }
+  }
 }

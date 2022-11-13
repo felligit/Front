@@ -5,14 +5,14 @@ import "antd/dist/antd.css";
 import { Redirect, Route, Switch } from "react-router-dom";
 import AdminSignIn from "../pages/Admin/SignIn";
 import "./LayoutAdmin.scss";
-import MenuTop from "../components/Admin/MenuTop";
+//import MenuTop from "../components/Admin/MenuTop";
 import MenuSider from "../components/Admin/MenuSider";
 import useAuth from "../hooks/useAuth";
 
 export default function LayoutAdmin(props) {
   //console.log(props);
   const { routes } = props;
-  const { Header, Content, Footer } = Layout;
+  const { Content, Footer } = Layout;
   const [menuCollapsed, setMenuCollapsed] = useState(false);
 
   const { userjf, isLoading } = useAuth();
@@ -31,22 +31,21 @@ export default function LayoutAdmin(props) {
   if (userjf && !isLoading) {
     return (
       <Layout>
-        <MenuSider menuCollapsed={menuCollapsed} />
+        <MenuSider
+          menuCollapsed={menuCollapsed}
+          setMenuCollapsed={setMenuCollapsed}
+        />
         <Layout
           classnames="layout-admin"
           style={{ marginLeft: menuCollapsed ? "80px" : "200px" }}
         >
-          <Header className="layout-admin__header">
-            <MenuTop
-              menuCollapsed={menuCollapsed}
-              setMenuCollapsed={setMenuCollapsed}
-            />
-          </Header>
+          {/* menuCollapsed={menuCollapsed}
+          setMenuCollapsed={setMenuCollapsed} */}
           <Content className="layout-admin__content">
             <LoadRoutes routes={routes} />
           </Content>
           <Footer className="layout-admin__footer">
-            <h5>Daniel Lanzziano | Diseñador & desarrollador Web jajajaa</h5>
+            <h5>Daniel Lanzziano | Diseñador & desarrollador Web</h5>
           </Footer>
         </Layout>
       </Layout>

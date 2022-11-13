@@ -39,7 +39,7 @@ export default function ReviewServices() {
                 name="yonhanner Miranda"
                 subtitle="Vendedor independiente"
                 avatar={personal}
-                review='Gracias a la tienda online que "Código Web" me ha creado" he visto  como mis ganancias han crecido, ya puedo ahorrar y hasta irme de vacaciones, los resultados significativos de vender por internet son sumamente enriquecedores.!'
+                review='Gracias a la tienda online que "Codesa" me ha creado, he visto  como mis ganancias han crecido, ya puedo ahorrar y hasta irme de vacaciones, los resultados significativos de vender por internet son sumamente enriquecedores.!'
               />
             </Col>
             <Col md={8}>
@@ -47,7 +47,7 @@ export default function ReviewServices() {
                 name="Automatics"
                 subtitle="Compañìa & asociados"
                 avatar={privada}
-                review="Nosotros como empresa requeriamos un software potente y rapido que trabajase en tiempo real almacenando datos patra su posterior análisis,  sus servicios fueron de alta categoría y cumplieron nuestras espectativas..."
+                review="Nosotros como empresa requeriamos un software potente y rapido que trabajase en tiempo real almacenando datos para su posterior análisis,  sus servicios fueron de alta categoría y cumplieron nuestras espectativas..."
               />
             </Col>
           </Row>
@@ -61,12 +61,11 @@ export default function ReviewServices() {
               />
             </Col>
             <Col md={8}>
-              .
               <CardReview
                 name="Mecanics Enginners"
                 subtitle="Asociación de ingenieros"
                 avatar={mecanica}
-                review='Como grupo emprendedor y futura empresa requeriamos de un inventario de productos, servicios, proveedores, repuestos,  clientes, etc, "Código Web"  fúe de gran ayuda y versatibilidad porque cumplió y nos dió un producto funcional, escalable y veloz. Excelente producto...'
+                review='Como grupo emprendedor y futura empresa requeriamos de un inventario de productos, servicios, proveedores, repuestos,  clientes, etc, "Codesa"  fúe de gran ayuda y versatibilidad porque cumplió y nos dió un producto funcional, escalable y veloz. Excelente producto...'
               />
             </Col>
             <Col md={8}>
@@ -74,7 +73,7 @@ export default function ReviewServices() {
                 name="Magnolia Ramirez"
                 subtitle="Veterinario"
                 avatar={mascotas}
-                review='En hora buena! un amigo me recomendó "Código Web" y desde entonces mas perros y gatos saludables, me encanta  ayudar a los animales, sus mascotas son las mías...Feliz y agradecida...Solo me falta un principe azul.'
+                review='Que bueno fué el qué un amigo me recomendará  "Codesa" , los busqué y contacté... desde entonces mas perros y gatos saludables, me encanta  ayudar a los animales, sus mascotas son las mías...Feliz y agradecida...Solo me falta un principe azul.'
               />
             </Col>
           </Row>

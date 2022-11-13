@@ -27,12 +27,12 @@ function RenderListLeft() {
     <ul>
       <li>
         <Icon type="mobile" />
-        <span> 310 2294954</span>
+        <span>314 7677281</span>
       </li>
       <li>
         <Link to="/contact">
           <Icon type="code" />
-          Contáctame!
+          Contáctanos!
         </Link>
       </li>
       {/*       <li>
@@ -50,10 +50,10 @@ function RenderListRight() {
     <ul>
       <li>
         <Icon type="mobile" />
-        <span> 314 7677281 </span>
+        <span> 310 2294954 </span>
       </li>
       <li>
-        <Link to="/experience">
+        <Link to="/apps">
           <Icon type="user" />
           Experiencia!
         </Link>
@@ -73,11 +73,11 @@ function RenderMail() {
     <ul>
       <li>
         <Icon type="mail" />
-        <span> Codigo-Web@gmail.com </span>
+        <span> Codesa@gmail.com </span>
       </li>
       <li>
         <Icon type="mail" />
-        <span> Codigo-Web@Correoempresarial.com.co</span>
+        <span> Codesa@Correoempresarial.com.co</span>
       </li>
     </ul>
   );

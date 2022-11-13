@@ -1,0 +1,93 @@
+@import "../../../scss/index.scss";
+
+.services-offer {
+  margin-top: 90px;
+  margin-bottom: 30px;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 18px;
+
+    h2,
+    .ant-collapse-header {
+      color: $fifth-color !important;
+      font-size: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+      background-color: $background-grey-dark;
+    }
+    h3,
+    .ant-collapse-content-box {
+      font-size: 22px;
+      color: $fifth-color;
+      background-color: $background-grey-dark;
+      ol,
+      li,
+      p {
+        color: $fifth-color-light;
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__list {
+    align-items: center;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 10px;
+
+    h3 {
+      color: $fifth-color;
+      font-size: 20px;
+    }
+    ol,
+    li,
+    p {
+      color: $fifth-color-light;
+      font-size: 18px;
+    }
+    p {
+      text-align: justify;
+    }
+  }
+  .row-cards {
+    .ant-col {
+      padding: 3px !important;
+    }
+  }
+
+  &__card {
+    border: 0;
+    background-color: transparent;
+
+    p {
+      text-align: justify;
+      font-size: 15px;
+      color: $fifth-color;
+    }
+    .ant-card-meta {
+      display: flex;
+      align-items: center;
+      line-height: 1;
+      margin-top: 25px;
+      color: $font-grey-dark;
+    }
+
+    .ant-card-meta-avatar {
+      .ant-avatar {
+        width: 50px;
+        height: 50px;
+      }
+    }
+    .ant-card-meta-detail {
+      .ant-card-meta-title {
+        color: $fifth-color-dark;
+        padding: 2px;
+      }
+      .ant-card-meta-description {
+        color: $fifth-color-hover;
+        padding: 2px;
+      }
+    }
+  }
+}

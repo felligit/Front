@@ -11,8 +11,8 @@ export default function Aplications(props) {
   console.log(history);
   return (
     <Row>
-      <Col md={4} />
-      <Col md={16}>
+      <Col xs={4} />
+      <Col xs={16}>
         {url ? (
           <div>
             <PostInfo url={url} />
@@ -23,7 +23,7 @@ export default function Aplications(props) {
           </div>
         )}
       </Col>
-      <Col md={4} />
+      <Col xs={4} />
     </Row>
   );
 }

@@ -3,11 +3,93 @@
 .menu-sider {
   position: fixed;
   left: 0;
-  top: 65px;
+  top: 0;
   width: 100%;
   height: 100vh;
   background-color: $dark-blue !important;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+
+  button {
+    background-color: transparent;
+    border-color: transparent;
+    color: $font-light;
+    font-size: 18px;
+
+    &:hover {
+      color: $sevent-color-dark;
+      background-color: transparent;
+      border-color: transparent;
+      font-size: 20px;
+    }
+    &:focus,
+    &:active {
+      color: $sevent-color;
+      background-color: transparent;
+      border-color: transparent;
+    }
+  }
+
+  .logo {
+    padding: 0px;
+    margin-top: 42px;
+    margin-bottom: 42px;
+    background-color: $dark-blue;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+
+    &__img {
+      width: 180px;
+      padding: 0 15px;
+      background-color: $dark-blue;
+      align-items: flex-start;
+      position: absolute;
+      left: 0;
+    }
+    &__img-ver {
+      height: 580px;
+      width: 78px;
+      padding: 0;
+      background-color: $dark-blue;
+      align-items: center;
+      position: absolute;
+      left: 0;
+      margin-top: 0;
+    }
+  }
+  .buttons {
+    padding: 0px;
+    margin-top: 42px;
+    margin-bottom: 42px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    &__left {
+      padding: 0 15px;
+      margin-top: 42px;
+      /*     align-items: flex-start;
+    position: absolute; */
+      left: 0;
+    }
+    &__right {
+      padding: 0 15px;
+      margin-top: 42px;
+      /*     align-items: flex-start;
+    position: absolute; */
+      left: 0;
+    }
+  }
 }
+
 .nav-text {
   padding: 9px;
   color: $font-light;

@@ -1,8 +1,13 @@
 @import "../../../scss/index.scss";
 
 .contact-form {
-  margin-top: 60px;
+  margin-top: 66px;
   margin-bottom: 30px;
+
+  hr {
+    margin: 24px;
+    color: $sevent-color-middle;
+  }
 
   &__title {
     text-align: center;
@@ -20,10 +25,36 @@
     }
   }
 
+  &__logo {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 180px;
+      height: auto;
+    }
+    p {
+      color: $fifth-color;
+      font-size: 18px;
+    }
+    h2 {
+      color: $fifth-color;
+      font-size: 24px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    h3 {
+      color: $fifth-color-light;
+      font-size: 20px;
+    }
+  }
+
   &__parag {
     text-align: center;
     align-items: center;
     justify-content: center;
+    margin-top: 9px;
+    margin-bottom: 21px;
 
     p {
       color: $fifth-color-dark;
@@ -40,12 +71,14 @@
       width: 100%;
       // margin-left: 33px;
       font-size: 0em +20px / $defaultFontSize;
-      background-color: $primary-color;
+      background-color: $background-grey-hover;
+      border: 1px solid $border-dark;
       color: $font-light-dark;
       height: 42px;
 
       &:hover {
-        background-color: $primary-color-hover;
+        background-color: $background-grey-dark;
+        border: 1px solid $border-light;
         color: $font-light;
       }
       &:focus,

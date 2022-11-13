@@ -1,51 +1,28 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { Col, Row } from "antd";
 import "./MenuTop.scss";
-import { Menu } from "antd";
-import { Link } from "react-router-dom";
-import logo from "../../../assets/img/png/logo.png";
-import SocialLinks from "../SocialLinks";
-import { getMenuApi } from "../../../api/menu";
+
+import MenuBar from "../MenuBar";
 
 export default function MenuTop() {
-  const [menuData, setMenuData] = useState({});
-  console.log(menuData);
-  useEffect(() => {
-    getMenuApi().then((response) => {
-      const arrayMenu = [];
-      response.menu.forEach((item) => {
-        item.active && arrayMenu.push(item);
-      });
-      setMenuData(arrayMenu);
-    });
-  }, []);
+  //console.log(menuData);
 
   return (
-    <Menu className="menu-top" mode="horizontal">
-      <Menu.Item className="menu-top__item">
-        <Link to={"/"}>
-          <img src={logo} alt="código-web-logo" />
-        </Link>
-      </Menu.Item>
+    <Row>
+      <Col lg={2} />
+      <Col lg={20} className="menu-top">
+        <MenuBar />
+      </Col>
+      <Col lg={2} />
+    </Row>
+  );
+}
 
-      {Array.from(menuData).map((item) => {
-        const external = item.url.indexOf("http") > -1 ? true : false;
-        if (external) {
-          return (
-            <Menu.Item key={item._id} className="menu-top-web__item">
-              <a href={item.url} target="_blank" rel="noopener noreferrer">
-                {item.title}
-              </a>
-            </Menu.Item>
-          );
-        }
-        return (
-          <Menu.Item key={item._id} className="menu-top-web__item">
-            <Link to={item.url}>{item.title}</Link>
-          </Menu.Item>
-        );
-      })}
+/*       <Link to={"/"}>
+        <img src={logo} alt="código-web-logo" />
+      </Link> */
 
-      {/* <Menu.Item className="menu-top__item">
+/* <Menu.Item className="menu-top__item">
         <Link to={"/"}>Inicio</Link>
       </Menu.Item>
       <Menu.Item className="menu-top__item">
@@ -56,8 +33,4 @@ export default function MenuTop() {
       </Menu.Item>
       <Menu.Item className="menu-top__item">
         <Link to={"/apps"}>Productos</Link>
-      </Menu.Item> */}
-      <SocialLinks />
-    </Menu>
-  );
-}
+      </Menu.Item> */

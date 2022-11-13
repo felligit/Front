@@ -1,3 +1,5 @@
+import { notification } from "antd";
+
 export function minLengthValidation(inputData, minLength) {
   const { value } = inputData;
 
@@ -52,6 +54,7 @@ export function emailValidation(inputData) {
 
 export function minLengthValidationTelephone(inputData) {
   const { value } = inputData;
+  const telephoneVal = inputData.telephone;
   const telephoneValid = /^\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/;
   ///^[+]?(\d{1,2})?[\s.-]?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/;
   // /^\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\?([0-9]{4})$/;
@@ -59,7 +62,7 @@ export function minLengthValidationTelephone(inputData) {
   removeClassErrorSuccess(inputData);
 
   const resultValidation = telephoneValid.test(value);
-  if (resultValidation) {
+  if (resultValidation && telephoneVal !== true) {
     inputData.classList.add("success");
     return true;
   } else {
@@ -71,13 +74,14 @@ export function minLengthValidationTelephone(inputData) {
 export function commentsValidation(inputData) {
   const commentsValid =
     // eslint-disable-next-line no-useless-escape
-    /^.{1,255}$/;
-
+    /^.{30,255}$/;
+  const commentsVal = inputData.comments;
   const { value } = inputData;
 
   removeClassErrorSuccess(inputData);
 
   const resultValidation = commentsValid.test(value);
+
   if (resultValidation) {
     inputData.classList.add("success");
     return true;

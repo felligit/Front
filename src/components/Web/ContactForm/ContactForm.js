@@ -1,15 +1,7 @@
 import React, { useState } from "react";
 import "./ContactForm.scss";
-import {
-  Form,
-  Input,
-  Button,
-  Col,
-  Row,
-  Icon,
-  Checkbox,
-  notification,
-} from "antd";
+import WhatsappLogo from "../../../assets/img/png/WhatsappLogo.png";
+import { Form, Input, Button, Col, Row, Checkbox, notification } from "antd";
 
 import {
   nameValidation,
@@ -69,7 +61,7 @@ export default function ContactForm() {
       setFormValid({ ...formValid, [name]: emailValidation(e.target) });
     }
 
-    if (type === "text") {
+    if (type === "textarea") {
       setFormValid({ ...formValid, [name]: commentsValidation(e.target) });
     }
 
@@ -89,21 +81,50 @@ export default function ContactForm() {
     const privacyPolicyVal = input.privacyPolicy;
 
     if (!nameVal || !telephoneVal || !emailVal || !subjectVal || !commentsVal) {
-      notification["error"]({ message: "todos los campos son obligatorios" });
+      notification["error"]({
+        message: "todos los campos son requeridos",
+        style: {
+          top: 42,
+          marginTop: 30,
+          width: 600,
+          marginLeft: 333 - 600,
+        },
+      });
+    } else if (privacyPolicyVal !== true) {
+      notification["error"]({
+        message: "Por favor acepte las politicas de privacidad",
+        style: {
+          top: 42,
+          marginTop: 30,
+          width: 600,
+          marginLeft: 333 - 600,
+        },
+      });
     } else {
-      if (privacyPolicyVal !== true) {
+      const result = await contactFormApi(input);
+      if (!result.ok) {
         notification["error"]({
-          message: "Por favor acepte las politicas de privacidad",
+          message: result.message,
+          style: {
+            top: 42,
+            marginTop: 30,
+            width: 600,
+            marginLeft: 333 - 600,
+          },
         });
       } else {
-        const result = await contactFormApi(input);
-        if (!result.ok) {
-          notification["error"]({ message: result.message });
-        } else {
-          notification["success"]({ message: result.message });
-        }
-        resetForm();
+        notification["success"]({
+          message: result.message,
+          style: {
+            top: 42,
+            marginTop: 30,
+            width: 600,
+            marginLeft: 333 - 600,
+          },
+        });
       }
+
+      resetForm();
     }
   };
 
@@ -135,23 +156,23 @@ export default function ContactForm() {
   return (
     <Row className="contact-form">
       <Row>
-        <Col lg={4} />
-        <Col lg={16} className="contact-form__title">
-          <h2>Contáctenos</h2>
-          <h3>Con gusto atenderemos su solicitud...</h3>
+        <Col xs={2} />
+        <Col xs={20} className="contact-form__title">
           <p className="contact-form__parag">
             Desarrollamos programación de software a medida para personas
-            independientes,pequeñas y medianas empresas, adaptádolo a las
-            necesidades de su negocio. Disfruta de nuestros servicios que harán
+            independientes, pequeñas y medianas empresas, adaptándolo a las
+            necesidades de su negocio. Disfrute de nuestros servicios que harán
             crecer tu marca, tus ventas, tus productos y tu bolsillo.
           </p>
+          <h2>Contáctenos Por Formulario De Contácto</h2>
+          <h3>Con gusto atenderemos su solicitud...</h3>
         </Col>
-        <Col lg={4} />
+        <Col xs={2} />
       </Row>
 
       <Row>
-        <Col lg={4} />
-        <Col lg={16}>
+        <Col xs={4} />
+        <Col xs={16}>
           <Form
             className="contact-form-scheme"
             onSubmitCapture={handleSubmit}
@@ -233,7 +254,30 @@ export default function ContactForm() {
             </Form.Item>
           </Form>
         </Col>
-        <Col lg={4} />
+        <Col xs={4} />
+      </Row>
+
+      <hr />
+
+      <Row>
+        <Col xs={4} />
+        <Col xs={16} className="contact-form__logo">
+          <h2>Contáctenos Por Whatsapp</h2>
+          <p className="contact-form__parag">
+            Pincha en la imagen de whatsapp y podrás ponerte en contacto con
+            nosotros, enseguida te responderemos.
+          </p>
+          <a
+            href="https://wa.me/573147677281"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Hola requiero algunos de sus servicios"
+          >
+            <h3>Escríbenos Un Whatsapp...</h3>
+            <img src={WhatsappLogo} alt="logo-Whatsapp" />
+          </a>
+        </Col>
+        <Col xs={4} />
       </Row>
     </Row>
   );

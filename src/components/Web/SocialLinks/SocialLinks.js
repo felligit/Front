@@ -10,7 +10,7 @@ export default function SocialLinks() {
   return (
     <div className="social-links">
       <a
-        href="https://www.whatsapp.com"
+        href="https://wa.me/573147677281"
         className="whatsapp"
         target="_blank"
         rel="noopener noreferrer"
